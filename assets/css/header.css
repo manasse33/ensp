@@ -1,0 +1,102 @@
+@import url("global.css");
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+ul{
+    list-style: none;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ul{
+    display: flex;
+    gap: 50px;
+} */
+
+.logo img {
+    height: 60px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.4s ease-in-out, transform 0.3s ease, text-shadow 0.3s ease; /* Transition douce sur la couleur, la taille, et l'ombre du texte */
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: var(--accent-red);
+    transform: scale(1.1); 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8); /* Ombre lumineuse pour ajouter de l'impact */
+
+}
+.navbar a.active{
+    color: var(--accent-red);
+    transform: scale(1.1); 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8); /* Ombre lumineuse pour ajouter de l'impact */
+
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 50px;
+    color: #fff;
+}
+
+
+@media screen and (max-width:768px) {
+    .navbar{
+        display: none;
+        flex-direction: column;
+        width: 200px;
+        text-align: center;
+        background-color: var(--text-light);
+        position: absolute;
+        top: 60px; /* Juste en dessous du logo */
+        /* left: 200px; */
+        right: 0;
+        padding: 10px 0;
+
+    }
+
+    .navbar.active {
+        display: flex; /* Affiche le menu quand la classe active est ajoutée */
+    }
+
+    /* Ajout d'une icône de menu hamburger */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active {
+        display: block;
+    }
+
+    .navbar{
+    font-size: 18px;
+        padding: 10px;
+        width: 100px;
+    }
+}
