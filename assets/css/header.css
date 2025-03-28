@@ -1,37 +1,33 @@
 @import url("global.css");
 
-a{
-    text-decoration: none;
-    color: #fff;
-}
-ul{
-    list-style: none;
-}
+/*SECTION navbar*/
 
-header{
+.header {
+    padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
-header .container{
+header .container {
+    /* width: 90%; */
+    /* max-width: 1200px; */
+    margin: auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
-
-/* ul{
-    display: flex;
-    gap: 50px;
-} */
 
 .logo img {
     height: 60px;
 }
 
-.navbar ul {
+/* 📜 Menu Liens de navbar */
+.navbar{
+    /* list-style: none; */
     display: flex;
     gap: 40px;
 }
@@ -57,6 +53,53 @@ header .container{
 
 }
 
+
+/* Ajouter un soulignement animé au survol */
+.navbar a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: var(--accent-red);
+    transition: width 0.3s ease; /* Animation du soulignement */
+}
+
+.navbar a:hover::after {
+    width: 100%; /* Le soulignement s'étend sur toute la largeur du lien */
+}
+
+
+
+
+/*SCROLLE*/
+/* Menu avec fond et liens modifiés après le scroll */
+.header.scrolled {
+    background-color: var(--text-light); /* Changer la couleur de fond */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+.header.scrolled .navbar a {
+    color: var(--black); /* Couleur des liens après le scroll */
+}
+
+.header.scrolled .navbar a.active {
+    color: var(--primary-blue); /* Couleur des liens après le scroll */
+}
+
+.header.scrolled .navbar a:hover {
+    color: var(--primary-blue); /* Couleur des liens au survol après le scroll */
+}
+
+.header.scrolled .btn-contact {
+    background: var(--primary-blue); /* Couleur du bouton après le scroll */
+}
+
+.header.scrolled .btn-contact:hover {
+    background: var(--text-dark); /* Couleur du bouton au survol après le scroll */
+}
+
+
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -64,20 +107,24 @@ header .container{
     color: #fff;
 }
 
-
 @media screen and (max-width:768px) {
     .navbar{
         display: none;
         flex-direction: column;
-        width: 200px;
+        width: 100%;
         text-align: center;
-        background-color: var(--text-light);
+        background-color: #fff;
         position: absolute;
-        top: 60px; /* Juste en dessous du logo */
+        top: 80px; /* Juste en dessous du logo */
         /* left: 200px; */
         right: 0;
         padding: 10px 0;
+       
 
+    }
+
+    .navbar a{
+        color: var(--primary-blue);
     }
 
     .navbar.active {
@@ -88,6 +135,7 @@ header .container{
     .hamburger {
         display: block;
         cursor: pointer;
+        font-size: 40px;
     }
 
     .hamburger.active {
@@ -100,3 +148,7 @@ header .container{
         width: 100px;
     }
 }
+
+
+
+
