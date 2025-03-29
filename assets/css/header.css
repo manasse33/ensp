@@ -6,10 +6,12 @@
     padding: 15px 0;
     position: fixed;
     width: 100%;
+    padding: 20px;
     /* height: 100%; */
     top: 0;
     left: 0;
     z-index: 1000;
+    background-color: var(--primary-blue);
     
     /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
 }
@@ -76,7 +78,7 @@ header .container {
 /*SCROLLE*/
 /* Menu avec fond et liens modifiés après le scroll */
 .header.scrolled {
-    background-color: var(--text-light); /* Changer la couleur de fond */
+    background-color: var(--primary-blue); /* Changer la couleur de fond */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
 }
 
