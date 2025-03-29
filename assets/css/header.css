@@ -83,11 +83,11 @@ header .container {
 }
 
 .header.scrolled .navbar a {
-    color: var(--black); /* Couleur des liens après le scroll */
+    color: var(--accent-red); /* Couleur des liens après le scroll */
 }
 
 .header.scrolled .navbar a.active {
-    color: var(--primary-blue); /* Couleur des liens après le scroll */
+    color: var(--text-light); /* Couleur des liens après le scroll */
 }
 
 .header.scrolled .navbar a:hover {

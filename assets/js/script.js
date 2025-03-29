@@ -14,3 +14,25 @@ function toggleMenu(){
                 header.classList.remove('scrolled');
             }
         });
+
+let slideIndex = 0;  // L'indice de l'image actuelle
+
+// Fonction pour déplacer le slide
+function moveSlide(n) {
+    const slides = document.querySelectorAll(".member");
+    const totalSlides = slides.length;
+
+    slideIndex += n;// Vérifie si l'indice du slide est en dehors des limites et le réinitialise si nécessaire
+    if (slideIndex >= totalSlides) {
+        slideIndex = 0;
+    } else if (slideIndex < 0) {
+        slideIndex = totalSlides - 1;
+    }
+    // Déplace le slider
+    const slider = document.querySelector(".team-members");
+    slider.style.transform = translateX( $ (-slideIndex * 100 )  );
+}
+// Optionnel : faire avancer le slider automatiquement toutes les 3 secondes
+setInterval(() => {
+    moveSlide(1);
+}, 3000);
