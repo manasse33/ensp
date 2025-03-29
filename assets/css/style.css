@@ -1,2 +1,55 @@
 @import url("global.css");
 @import url("header.css");
+
+.about-intro {
+    padding: 80px 20px;
+    /* background: #f8f8f8; */
+    text-align: center;
+    padding: 200px;
+   
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    align-items: center;
+    justify-content: center;
+    max-width: 1024px;
+    margin: auto;
+    gap: 40px;
+   
+}
+
+.about-text {
+    flex: 1;
+    text-align: justify;
+    color: #fff;
+}
+
+.about-text h2 {
+    color: var(--accent-red);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.6;
+    /* color: var(--text-dark); */
+    margin-bottom: 15px;
+}
+
+.highlight {
+    /* color: #fff; */
+    font-weight: bold;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
