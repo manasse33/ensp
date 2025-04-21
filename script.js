@@ -63,3 +63,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+const openBtn = document.getElementById('openVideo');
+const modal = document.getElementById('videoModal');
+const closeBtn = document.getElementById('closeVideo');
+const iframe = document.getElementById('videoIframe');
+
+openBtn.addEventListener('click', () => {
+  modal.style.display = 'flex';
+  iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+  iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+});
+
+// Fermer si on clique en dehors
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+    iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')}
+});
