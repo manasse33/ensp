@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="registration-section" id="register">
+        <h2 class="section-title">Formulaire d'inscription</h2>
+        <p class="section-subtitle">Rejoignez l'excellence de l'ENSP</p>
+      
+        <form class="registration-form">
+          <div class="form-group">
+            <input type="text" name="last_name" placeholder="Nom" required>
+            <input type="text" name="first_name" placeholder="Prénom" required>
+          </div>
+      
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Adresse Email" required>
+          </div>
+      
+          <div class="form-group">
+            <select name="level" required>
+              <option value="">-- Niveau d'étude --</option>
+              <option value="bac">Baccalauréat</option>
+              <option value="licence">Licence</option>
+              <option value="master">Master</option>
+              <option value="ingenieur">Ingénieur</option>
+            </select>
+      
+            <select name="field" required>
+              <option value="">-- Filière souhaitée --</option>
+              <option value="genie_civil">Génie Civil</option>
+        <option value="informatique">Informatique</option>
+        <option value="electrotechnique">Électrotechnique</option>
+        <option value="alimentaire">Génie Alimentaire</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn-register">S'inscrire</button>
+  </form>
+</section>
+
+</body>
+</html>
