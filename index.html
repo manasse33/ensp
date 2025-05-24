@@ -1,386 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENSP - École Nationale Supérieure Polytechnique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- <title>Document</title> -->
 </head>
 <body>
-    <header>
-        <div class="logo">
-          <h1><i class="fas fa-graduation-cap"></i> <span>ENSP</span></h1>
-        </div>
-          
-          <nav id="nav">
-              <ul>
-                  <li> <a href="#home">Accueil</a></li>
-                  <li> <a href="#about">À Propos</a></li>
-                  <li> <a href="#formaton">Formaton</a></li>
-                  <li> <a href="#testimonials">Témoignages</a></li>
-                  <li> <a href="#contact">Gallerie</a></li>
-                  <li> <a href="#contact">Contact</a></li>
-                  <li> <a href="login.html"><i class="fa fa-user"></i></a></li>
-              </ul>
-          </nav>
-          <div class="burger" id="burger">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-      </header>
+  
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>ENSP</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Accueil</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#formations">Formations</a></li>
+                <li><a href="#testimonials">Témoignages</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- <li><a href="#" class="cta-button">Candidater</a></li> -->
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
 
-      <main>
-        <section class="home" id="home">
-            <div class="overlay">
-              <div class="hero-content" data-aos="fade-up">
-                <h1 class="hero-title">ENSP — <span>Forger l'élite</span> de demain</h1>
-                <p class="hero-subtitle">Ingénierie. Excellence. Innovation.</p>
-                <a href="#" class="hero-btn" id="openVideo"><i class="fas fa-rocket"></i> Découvrir l’école</a>
-                <div class="video-modal" id="videoModal">
-                  <div class="video-content">
-                    <span class="close-video" id="closeVideo">&times;</span>
-                    <iframe
-                      id="videoIframe"
-                      src="videos/a.mp4"
-                      frameborder="0"
-                      allow="autoplay; encrypted-media"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="hero-decor"></div>
-            </div>
-          </section>
-          <section class="about-ensp" id="about">
-            <div class="about-wrapper">
-              
-              <div class="about-text" data-aos="fade-right">
-                <h2>L'Excellence Académique à l'ENSP</h2>
-                <p>
-                  Depuis sa création, l’École Nationale Supérieure Polytechnique s’impose comme un acteur incontournable de la formation d’ingénieurs d’élite, alliant rigueur scientifique, innovation technologique et ancrage sociétal.
-                </p>
-                <p>
-                  Grâce à des programmes exigeants, un corps enseignant de renom et des infrastructures modernes, l’ENSP forme les leaders techniques de demain.
-                </p>
-                  <!-- <a href="#programs" class="about-btn">Voir les formations</a> -->
-            </div>
+        <div class="overlay" id="overlay"></div>
+    </header>
 
-            <div class="about-image" data-aos="zoom-in">
-              <img src="images/image.jpg" alt="ENSP logo">
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content animate-on-scroll">
+                <h1 class="hero-title">ENSP — Forger l'élite de demain</h1>
+                <p class="hero-subtitle">Excellence • Innovation • Ingénierie</p>
+                <button class="cta-button" onclick="document.getElementById('about').scrollIntoView()">
+                    <i class="fas fa-rocket"></i>
+                    Découvrir l'école
+                </button>
             </div>
-        
-          </div>
         </section>
 
-
-
-        <section class="formation" id="formation">
-          <div class="formation-header">
-            <h2>Nos Formations</h2>
-            <p>Des parcours d'excellence adaptés aux défis technologiques d'aujourd'hui et de demain.</p>
-            <h2>Licence</h2>
-          </div>
-        
-          <div class="formation-cards">
-            <div class="card-wrapper" data-aos="zoom-in" data-aos-delay="100" onclick="this.classList.toggle('flipped')">
-              <div class="formation-card">
-                <div class="formation-card-front">
-                  <span class="flip-hint"><i class="fas fa-sync-alt"></i> Cliquer</span>
-                  <h3></h3>
-                  <p>Description...</p>
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">À Propos de l'ENSP</h2>
+                <p class="section-subtitle animate-on-scroll">Une institution d'excellence au service de la formation d'ingénieurs</p>
                 
-                  <h3>Électronique & Télécommunication</h3>
-                  <p>Maîtrisez les systèmes embarqués, les réseaux et les signaux numériques.</p>
+                <div class="about-content">
+                    <div class="about-text animate-on-scroll">
+                        <h3>L'Excellence Académique</h3>
+                        <p>Depuis sa création, l'École Nationale Supérieure Polytechnique s'impose comme un acteur incontournable de la formation d'ingénieurs d'élite, alliant rigueur scientifique, innovation technologique et ancrage sociétal.</p>
+                        <p>Grâce à des programmes exigeants, un corps enseignant de renom et des infrastructures modernes, l'ENSP forme les leaders techniques de demain.</p>
+                        <button class="cta-button" onclick="document.getElementById('formations').scrollIntoView()">
+                            Découvrir nos formations
+                        </button>
+                    </div>
+                    <div class="about-image animate-on-scroll">
+                        <img src="images/image.jpg" alt="Campus ENSP">
+                    </div>
                 </div>
-                <div class="formation-card-back">
-                  <h3>Détails</h3>
-                  <p>Débouchés, projets étudiants, partenariats avec les entreprises et certifications.</p>
-                </div>
-              </div>
             </div>
-
-            <div class="card-wrapper" data-aos="zoom-in" data-aos-delay="200" onclick="this.classList.toggle('flipped')">
-              <div class="formation-card">
-                <div class="formation-card-front">
-                  <span class="flip-hint"><i class="fas fa-sync-alt"></i> Cliquer</span>
-                  <h3></h3>
-                  <p>Description...</p>
-                  <h3>Électronique & Télécommunication</h3>
-                  <p>Maîtrisez les systèmes embarqués, les réseaux et les signaux numériques.</p>
-                </div>
-                <div class="formation-card-back">
-                  <h3>Détails</h3>
-                  <p>Débouchés, projets étudiants, partenariats avec les entreprises et certifications.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-wrapper" data-aos="zoom-in" data-aos-delay="300" onclick="this.classList.toggle('flipped')">
-              <div class="formation-card">
-                <div class="formation-card-front">
-                  <span class="flip-hint"><i class="fas fa-sync-alt"></i> Cliquer</span>
-                  <h3></h3>
-                  <p>Description...</p>
-                  <h3>Électronique & Télécommunication</h3>
-                  <p>Maîtrisez les systèmes embarqués, les réseaux et les signaux numériques.</p>
-                </div>
-                <div class="formation-card-back">
-                  <h3>Détails</h3>
-                  <p>Débouchés, projets étudiants, partenariats avec les entreprises et certifications.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-wrapper" data-aos="zoom-in" data-aos-delay="400" onclick="this.classList.toggle('flipped')">
-              <div class="formation-card">
-                <div class="formation-card-front">
-                  <span class="flip-hint"><i class="fas fa-sync-alt"></i> Cliquer</span>
-                  <h3></h3>
-                  <p>Description...</p>
-                  <h3>Électronique & Télécommunication</h3>
-                  <p>Maîtrisez les systèmes embarqués, les réseaux et les signaux numériques.</p>
-                </div>
-                <div class="formation-card-back">
-                  <h3>Détails</h3>
-                  <p>Débouchés, projets étudiants, partenariats avec les entreprises et certifications.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-wrapper" data-aos="zoom-in" data-aos-delay="500" onclick="this.classList.toggle('flipped')">
-              <div class="formation-card">
-                <div class="formation-card-front">
-                  <span class="flip-hint"><i class="fas fa-sync-alt"></i> Cliquer</span>
-                  <h3></h3>
-                  <p>Description...</p>
-                  <h3>Électronique & Télécommunication</h3>
-                  <p>Maîtrisez les systèmes embarqués, les réseaux et les signaux numériques.</p>
-                </div>
-                <div class="formation-card-back">
-                  <h3>Détails</h3>
-                  <p>Débouchés, projets étudiants, partenariats avec les entreprises et certifications.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-wrapper" data-aos="zoom-in" data-aos-delay="600" onclick="this.classList.toggle('flipped')">
-              <div class="formation-card">
-                <div class="formation-card-front">
-                  <span class="flip-hint"><i class="fas fa-sync-alt"></i> Cliquer</span>
-                  <h3></h3>
-                  <p>Description...</p>
-                  <h3>Électronique & Télécommunication</h3>
-                  <p>Maîtrisez les systèmes embarqués, les réseaux et les signaux numériques.</p>
-                </div>
-                <div class="formation-card-back">
-                  <h3>Détails</h3>
-                  <p>Débouchés, projets étudiants, partenariats avec les entreprises et certifications.</p>
-                </div>
-              </div>
-            </div>
-          
-            <!-- Répète le bloc "card-wrapper" pour chaque formation -->
-          </div>
-
-          <div class="formation-header">
-            <h2 style="padding: 5px 0;">Master & Ingenieurie</h2>
-            <!-- <p>Des parcours d'excellence adaptés aux défis technologiques d'aujourd'hui et de demain.</p> -->
-          </div>
-
-          <div class="formation-cards">
-            <div class="card-wrapper" data-aos="zoom-in" data-aos-delay="700" onclick="this.classList.toggle('flipped')">
-              <div class="formation-card">
-                <div class="formation-card-front">
-                  <span class="flip-hint"><i class="fas fa-sync-alt"></i> Cliquer</span>
-                  <h3></h3>
-                  <p>Description...</p>
-                  <h3>Électronique & Télécommunication</h3>
-                  <p>Maîtrisez les systèmes embarqués, les réseaux et les signaux numériques.</p>
-                </div>
-                <div class="formation-card-back">
-                  <h3>Détails</h3>
-                  <p>Débouchés, projets étudiants, partenariats avec les entreprises et certifications.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-wrapper" data-aos="zoom-in" data-aos-delay="800" onclick="this.classList.toggle('flipped')">
-              <div class="formation-card">
-                <div class="formation-card-front">
-                  <span class="flip-hint"><i class="fas fa-sync-alt"></i> Cliquer</span>
-                  <h3></h3>
-                  <p>Description...</p>
-                  <h3>Électronique & Télécommunication</h3>
-                  <p>Maîtrisez les systèmes embarqués, les réseaux et les signaux numériques.</p>
-                </div>
-                <div class="formation-card-back">
-                  <h3>Détails</h3>
-                  <p>Débouchés, projets étudiants, partenariats avec les entreprises et certifications.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-wrapper" data-aos="zoom-in" data-aos-delay="900" onclick="this.classList.toggle('flipped')">
-              <div class="formation-card">
-                <div class="formation-card-front">
-                  <span class="flip-hint"><i class="fas fa-sync-alt"></i> Cliquer</span>
-                  <h3></h3>
-                  <p>Description...</p>
-                  <h3>Électronique & Télécommunication</h3>
-                  <p>Maîtrisez les systèmes embarqués, les réseaux et les signaux numériques.</p>
-                </div>
-                <div class="formation-card-back">
-                  <h3>Détails</h3>
-                  <p>Débouchés, projets étudiants, partenariats avec les entreprises et certifications.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-wrapper" data-aos="zoom-in" data-aos-delay="1000" onclick="this.classList.toggle('flipped')">
-              <div class="formation-card">
-                <div class="formation-card-front">
-                  <span class="flip-hint"><i class="fas fa-sync-alt"></i> Cliquer</span>
-                  <h3></h3>
-                  <p>Description...</p>
-                  <h3>Électronique & Télécommunication</h3>
-                  <p>Maîtrisez les systèmes embarqués, les réseaux et les signaux numériques.</p>
-                </div>
-                <div class="formation-card-back">
-                  <h3>Détails</h3>
-                  <p>Débouchés, projets étudiants, partenariats avec les entreprises et certifications.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-wrapper" data-aos="zoom-in" data-aos-delay="1100" onclick="this.classList.toggle('flipped')">
-              <div class="formation-card">
-                <div class="formation-card-front">
-                  <span class="flip-hint"><i class="fas fa-sync-alt"></i> Cliquer</span>
-                  <h3></h3>
-                  <p>Description...</p>
-                  <h3>Électronique & Télécommunication</h3>
-                  <p>Maîtrisez les systèmes embarqués, les réseaux et les signaux numériques.</p>
-                </div>
-                <div class="formation-card-back">
-                  <h3>Détails</h3>
-                  <p>Débouchés, projets étudiants, partenariats avec les entreprises et certifications.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-wrapper" data-aos="zoom-in" data-aos-delay="1200" onclick="this.classList.toggle('flipped')">
-              <div class="formation-card">
-                <div class="formation-card-front">
-                  <span class="flip-hint"><i class="fas fa-sync-alt"></i> Cliquer</span>
-                  <h3></h3>
-                  <p>Description...</p>
-                  <h3>Électronique & Télécommunication</h3>
-                  <p>Maîtrisez les systèmes embarqués, les réseaux et les signaux numériques.</p>
-                </div>
-                <div class="formation-card-back">
-                  <h3>Détails</h3>
-                  <p>Débouchés, projets étudiants, partenariats avec les entreprises et certifications.</p>
-                </div>
-              </div>
-            </div>
-          
-            
-          </div>
-          
-    </section>
-
-    <section class="gallery-section" id="gallery">
-      <h2 class="section-title">Galerie</h2>
-      <p class="section-subtitle">Un aperçu de la vie à l’ENSP</p>
-      
-      <div class="gallery-grid">
-        <div class="gallery-item" data-aos="zoom-in">
-          <img src="images/Screenshot_20250329-095330_LinkedIn.jpg" alt="Activité 1">
-        </div>
-        <div class="gallery-item" data-aos="zoom-in">
-          <img src="images/Screenshot_20250329-095330_LinkedIn.jpg" alt="Activité 2">
-        </div>
-        <div class="gallery-item" data-aos="zoom-in">
-          <img src="images/Screenshot_20250329-095330_LinkedIn.jpg" alt="Activité 3">
-        </div>
-      </div>
-    </section>
-    
-
-          <section class="testimonial-section" id="testimonials">
-            <h2 class="section-title">Témoignages</h2>
-            <p class="section-subtitle">Ils ont étudié à l'ENSP, voici ce qu'ils en pensent</p>
-          
-            <div class="testimonials-container">
-              <div class="testimonial-card" data-aos="fade-up">
-                <img src="images/image.jpg" alt="Avatar" class="avatar">
-                <h3>Manassé A.</h3>
-                <p class="student-field">Génie Civil</p>
-                <p class="testimonial-text">"L’ENSP m’a permis de découvrir le potentiel que je ne soupçonnais pas en moi. Grâce à une formation rigoureuse et des projets concrets, je suis aujourd’hui ingénieure dans une grande entreprise."</p>
-              </div>
-          
-              <div class="testimonial-card" data-aos="fade-up" data-aos-delay="150">
-                <img src="images/image.jpg" alt="Avatar" class="avatar">
-                <h3>Manassé A..</h3>
-            <p class="student-field">Électronique & Télécom</p>
-            <p class="testimonial-text">"Une école d’excellence, des profs passionnés et une vraie ambiance de travail. Je suis fier d’avoir été formé ici."</p>
-          </div>
-
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-              <img src="images/image.jpg" alt="Avatar" class="avatar">
-              <h3>Manassé A.</h3>
-              <p class="student-field">Qualité Alimentaire</p>
-              <p class="testimonial-text">"L’ENSP valorise les femmes et nous pousse à exceller. Aujourd’hui, je mène des projets de qualité dans le secteur agroalimentaire."</p>
-            </div>
-          </div>
         </section>
 
-
-
-        <section class="contact-section" id="contact">
-          <div class="contact-wrapper">
-            <div class="contact-left animate-on-scroll">
-              <h2><i class="fas fa-envelope"></i> Contactez-nous</h2>
-              <p>Une question, un besoin ? L’équipe ENSP est toujours là pour vous répondre avec le sourire !</p>
-
-              <ul class="contact-info">
-                <li><i class="fas fa-phone-alt"></i> +242 06 757 11 00</li>
-                <li><i class="fas fa-envelope"></i> contact@ensp.com</li>
-                <li><i class="fas fa-map-marker-alt"></i> Brazzaville, Diata</li>
-                <li><i class="fab fa-whatsapp"></i> WhatsApp: +242 06 757 11 00</li>
-                <li><i class="fab fa-facebook"></i> Facebook: ENSP Official</li>
-                <li><i class="fab fa-instagram"></i> Linkedin: @ensp practice</li>
-              </ul>
+        <section class="section stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item animate-on-scroll">
+                        <h3>50+</h3>
+                        <p>Années d'Excellence</p>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <h3>5000+</h3>
+                        <p>Diplômés</p>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <h3>12</h3>
+                        <p>Spécialités</p>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <h3>95%</h3>
+                        <p>Taux d'Insertion</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="contact-right">
-              <form class="contact-form" action="#" method="POST" id="contactForm">
-                <input type="text" name="name" placeholder="Votre nom" required>
-                <input type="email" name="email" placeholder="Votre email" required>
-                <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
-                <button type="submit"><i class="fas fa-paper-plane"></i> Envoyer</button>
-              </form>
+        <section id="formations" class="section formations">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Nos Formations</h2>
+                <p class="section-subtitle animate-on-scroll">Des parcours d'excellence adaptés aux défis technologiques d'aujourd'hui et de demain</p>
+                
+                <div class="formations-grid">
+                    <div class="formation-card animate-on-scroll">
+                        <h3>Électronique & Télécommunications</h3>
+                        <p>Plongez dans l'univers des systèmes embarqués, des réseaux de communication et de l'électronique avancée.</p>
+                        <div class="formation-tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag">5G</span>
+                            <span class="tag">Systèmes embarqués</span>
+                        </div>
+                    </div>
+                    
+                    <div class="formation-card animate-on-scroll">
+                        <h3>Électrotechnique</h3>
+                        <p>Devenez acteur de la transition énergétique en maîtrisant la conversion d'énergie et les machines électriques.</p>
+                        <div class="formation-tags">
+                            <span class="tag">Énergies renouvelables</span>
+                            <span class="tag">Smart Grid</span>
+                            <span class="tag">Automatisation</span>
+                        </div>
+                    </div>
+                    
+                    <div class="formation-card animate-on-scroll">
+                        <h3>Génie Civil</h3>
+                        <p>Façonnez les infrastructures de demain : bâtiments intelligents, routes, ponts durables et respectueux de l'environnement.</p>
+                        <div class="formation-tags">
+                            <span class="tag">BIM</span>
+                            <span class="tag">Éco-construction</span>
+                            <span class="tag">Géotechnique</span>
+                        </div>
+                    </div>
+                    
+                    <div class="formation-card animate-on-scroll">
+                        <h3>Génie Industriel</h3>
+                        <p>Optimisez les processus de production et managez l'innovation dans l'industrie 4.0.</p>
+                        <div class="formation-tags">
+                            <span class="tag">Lean Manufacturing</span>
+                            <span class="tag">Supply Chain</span>
+                            <span class="tag">Industrie 4.0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="formation-card animate-on-scroll">
+                        <h3>Agroalimentaire</h3>
+                        <p>Maîtrisez les processus de transformation, conservation et contrôle qualité dans l'industrie alimentaire.</p>
+                        <div class="formation-tags">
+                            <span class="tag">Food Tech</span>
+                            <span class="tag">HACCP</span>
+                            <span class="tag">Biotechnologies</span>
+                        </div>
+                    </div>
+                    
+                    <div class="formation-card animate-on-scroll">
+                        <h3>Qualité Alimentaire</h3>
+                        <p>Garantissez la sécurité alimentaire et la conformité aux normes internationales de qualité.</p>
+                        <div class="formation-tags">
+                            <span class="tag">ISO 22000</span>
+                            <span class="tag">Audit qualité</span>
+                            <span class="tag">Sécurité sanitaire</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </section>          
+        </section>
 
-    
-          
-          
-      </main>
+        <section id="testimonials" class="section testimonials">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Témoignages</h2>
+                <p class="section-subtitle animate-on-scroll">Ils ont étudié à l'ENSP, voici ce qu'ils en pensent</p>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-avatar">MA</div>
+                        <p class="testimonial-text">"L'ENSP m'a permis de découvrir le potentiel que je ne soupçonnais pas en moi. Grâce à une formation rigoureuse et des projets concrets, je suis aujourd'hui ingénieure dans une grande entreprise."</p>
+                        <div class="testimonial-author">
+                            <strong>Manassé A.</strong><br>
+                            <small>Génie Civil - Promotion 2020</small>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-avatar">JK</div>
+                        <p class="testimonial-text">"Une école d'excellence, des professeurs passionnés et une vraie ambiance de travail. Je suis fier d'avoir été formé ici et de contribuer au développement technologique de notre pays."</p>
+                        <div class="testimonial-author">
+                            <strong>Jean K.</strong><br>
+                            <small>Électronique & Télécom - Promotion 2019</small>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-avatar">SM</div>
+                        <p class="testimonial-text">"L'ENSP valorise les femmes et nous pousse à exceller. Aujourd'hui, je mène des projets de qualité dans le secteur agroalimentaire et je forme la nouvelle génération."</p>
+                        <div class="testimonial-author">
+                            <strong>Sarah M.</strong><br>
+                            <small>Qualité Alimentaire - Promotion 2018</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-      <script>
-        AOS.init({
-          duration: 1000,
-          once: true
-        });
-      </script>
-      <script src="script.js"></script>
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Contactez-nous</h2>
+                <p class="section-subtitle animate-on-scroll">Une question, un projet ? L'équipe ENSP est là pour vous accompagner</p>
+                
+                <div class="contact-content">
+                    <div class="contact-info animate-on-scroll">
+                        <h3>Informations de Contact</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+242 06 757 11 00</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@ensp.edu.cg</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Avenue de l'Indépendance, Brazzaville</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>@ensp-brazzaville</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-facebook"></i>
+                            <span>ENSP Official</span>
+                        </div>
+                    </div>
+                    
+                    <!-- <form class="contact-form animate-on-scroll">
+                        <div class="form-group">
+                            <input type="text" placeholder="Votre nom complet" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Votre adresse email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Sujet de votre message" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+                    </form> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 École Nationale Supérieure Polytechnique. Tous droits réservés.</p>
+            <p>Formant l'excellence depuis plus de 50 ans</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
