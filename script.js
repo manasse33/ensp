@@ -67,7 +67,7 @@ class ENSPMobileMenu {
     openMenu() {
         this.hamburger.classList.add('active');
         this.navLinks.classList.add('active');
-        this.overlay.classList.add('active');
+        // this.overlay.classList.add('active');
         
         // Empêcher le scroll
         document.body.style.overflow = 'hidden';
@@ -84,7 +84,7 @@ class ENSPMobileMenu {
     closeMenu() {
         this.hamburger.classList.remove('active');
         this.navLinks.classList.remove('active');
-        this.overlay.classList.remove('active');
+        // this.overlay.classList.remove('active');
         
         // Restaurer le scroll
         document.body.style.overflow = '';
